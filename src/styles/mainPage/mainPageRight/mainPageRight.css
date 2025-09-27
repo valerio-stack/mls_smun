@@ -1,0 +1,53 @@
+
+.mainPage_right {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    position: relative;
+
+    --topHeight: 45vh;
+    --bottomHeight: 55vh;
+    --diameter: 28px;
+    grid-template-rows: var(--topHeight) var(--bottomHeight);
+}
+
+
+.mainPage_right .minimizeButtonContainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+.mainPage_right .minimizeButton {
+    width: var(--diameter);
+    height: var(--diameter);
+    bottom: calc(var(--diameter) / -2);
+    left: calc(var(--diameter) / -2);
+
+    margin-top: calc(var(--topHeight) - var(--diameter) / 2);
+    margin-left: calc(var(--diameter) / -2);
+
+    background-color: rgb(27, 27, 27);
+    border: 1.3px solid rgb(183, 183, 183);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    font-size: calc(0.5 * var(--diameter));
+    color: rgb(183, 183, 183);
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+
+    pointer-events: fill;
+}
+
+.mainPage_right .minimizeButton:hover {
+    filter: brightness(130%);
+}
+
+.mainPage_right .minimizeButton:active {
+    filter: brightness(90%);
+}

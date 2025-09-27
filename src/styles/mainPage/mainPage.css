@@ -1,0 +1,20 @@
+
+.mainPageContainer {
+    display: grid;
+    height: calc(100vh - var(--navbarHeight));
+    width: 100%;
+    overflow: hidden;
+    grid-template-columns: 61.5% 39.5%;
+    position: relative;
+}
+
+.mainPageMask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 25px;
+    background: linear-gradient(0deg,rgba(27, 27, 27, 0.5) 10%, transparent 100%);
+}
+
+/* Idea: if there's a scheduled test, a new section will appear above the assignments showing all tests and when it will start */

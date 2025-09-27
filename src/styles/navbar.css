@@ -1,0 +1,127 @@
+.navbar {
+    border-bottom: 1px solid rgba(255,255,255, 0.3);
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.navbar, .navbar_left, .navbar_right {
+    height: var(--navbarHeight);
+}
+
+.navbar_left, .navbar_right {
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.navbar .navbar_left_logo {
+    height: 80%;
+}
+
+.navbar_left_logoLink {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.navbar_left {
+    padding-left: 20px;
+}
+
+.navbar_right {
+    padding-right: 20px;
+}
+
+
+
+.navbarMenus {
+    padding: 5px 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.navbarMenus h3 {
+    font-size: 17.5px;
+    font-weight: 500;
+}
+
+.navbarMenus_underline {
+    position: absolute;
+    width: 90%;
+    bottom: 0;
+    height: 2.2px;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    background-color: rgba(116,197, 241, 0.9);
+    opacity: 0;
+    transition: 0.15s ease-in-out;
+}
+
+.navbarMenus:hover {
+    cursor: pointer;
+    color: rgba(116,197, 241, 0.9);
+}
+
+.navbarMenus:hover .navbarMenus_underline {
+    transition: 0.15s ease-in-out;
+    opacity: 1;
+}
+
+.navbarMenus:active {
+    background-color: rgb(25,25,25);
+    filter: brightness(130%);
+}
+
+
+
+
+.navbar_right_notificationButton {
+    font-size: 20px;
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.8);
+    margin-right: 18.5px;
+    position: relative;
+    transition: 0.15s ease-in-out;
+}
+
+.navbar_right_notificationButton:hover {
+    cursor: pointer;
+    -webkit-text-stroke: 1.5px rgb(178, 189, 191);   
+}
+
+.navbar_right_notificationButton:active {
+    -webkit-text-stroke: 1.5px rgb(138, 161, 165);
+}
+
+.navbar_right_notificationCount {
+    -webkit-text-stroke: transparent;
+    color: white;
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    border-radius: 50px;
+    background-color: rgb(228, 18, 18);
+    outline: 1.5px solid rgb(25,25,25);
+    width: 15.5px;
+    height: 15.5px;
+    font-size: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar_right_pfp {
+    border-radius: 50px;
+    height: 58%;
+    outline: 1.5px solid rgba(255, 255, 255, 0.8);
+}

@@ -1,0 +1,47 @@
+
+.mainPage_right .bottom { 
+    overflow-y: auto;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+    user-select: none;
+}
+
+.mainPage_right .bottom .student {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    background-color: rgba(70, 67, 37, 0.7);
+    padding: 7.5px 12px;
+    padding-right: 34px;
+}
+
+.mainPage_right .bottom .student:not(:first-child) {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mainPage_right .bottom .student_left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mainPage_right .bottom .student_name {
+    font-size: 18px;
+}
+
+.mainPage_right .bottom .student_right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.mainPage_right .bottom .student_rank {
+    width: 30px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.mainPage_right .bottom .student_pfp {
+    width: 34px;
+    border-radius: 50px;
+}

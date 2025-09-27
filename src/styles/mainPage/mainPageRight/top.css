@@ -1,0 +1,74 @@
+
+.mainPage_right .top {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 24px;
+}
+
+.mainPage_right .top .chart {
+    margin-right: 20px;
+}
+
+.mainPage_right .stats {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+    width: 100%;
+}
+
+/* Top Stats */
+.mainPage_right .topStats { }
+
+.mainPage_right .topStats_container {
+    background-color: rgb(50, 50, 50);
+    width: 100%;
+    padding: 9px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: fit-content;
+}
+
+.mainPage_right .topsStats_topContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mainPage_right .topsStats_bottomContainer {
+
+}
+
+
+
+/* Bottom Stats */
+.mainPage_right .bottomStats {
+    display: flex;
+    gap: 15px;
+}
+
+.mainPage_right .bottomStats_container {
+    background-color: rgb(50, 50, 50);
+    width: 100%;
+    padding: 9px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: fit-content;
+}
+
+.mainPage_right .bottomStats_topContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mainPage_right .bottomStats_bottomContainer {
+    
+}

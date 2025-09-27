@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: rgb(27,27,35);
+}
+
+
+#root {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(27, 27, 35);
+    color: rgb(211, 218, 217);
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --navbarHeight: 63px;
+    --mainPageLeft_marginTop: 33px;
+    --mainPageLeft_marginRight: 65px
+}
+
+
+button {
+    font-family: 'Lato', sans-serif;
+}
+
+.upsideDown_arrow {
+    font-size: 11.5px;
+    -webkit-text-stroke: 0.4px rgb(177, 177, 177);
+}
+
+.dividerLine {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg,rgba(48, 48, 48, 1) 0%, rgba(211, 219, 213, 0.3) 49%, rgba(31, 31, 31, 1) 100%);
+}
