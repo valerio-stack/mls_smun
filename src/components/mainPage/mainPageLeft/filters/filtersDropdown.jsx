@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useContext } from "react";
-import { assignments_obj as assignments_obj_import } from "../mainPageLeft";
+import { assignments_obj as assignments_obj_import } from "../../mainPage";
 import { activeFilter_obj as activeFilter_obj_import } from "./filters";
 import { get_assignmentStatus, get_assignmentTimeStatus } from "../assignment/functions/assignmentDateFunctions";
 import { useTransition, animated } from '@react-spring/web'

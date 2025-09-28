@@ -9,6 +9,7 @@
     z-index: 2;
 }
 
+
 .navbar, .navbar_left, .navbar_right {
     height: var(--navbarHeight);
 }
@@ -42,17 +43,20 @@
 
 
 .navbarMenus {
-    padding: 5px 10px;
+    padding: 5px 13px;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    transition: 0.15s ease-in-out;
 }
 
 .navbarMenus h3 {
     font-size: 17.5px;
     font-weight: 500;
+    color: rgb(211, 218, 217);
+    transition: 0.15s ease-in-out;
 }
 
 .navbarMenus_underline {
@@ -67,12 +71,12 @@
     transition: 0.15s ease-in-out;
 }
 
-.navbarMenus:hover {
-    cursor: pointer;
-    color: rgba(116,197, 241, 0.9);
+.navbar_left a:not(:first-child) {
+    text-decoration: none;
+    margin: 0;
 }
 
-.navbarMenus:hover .navbarMenus_underline {
+.navbar_left a:not(:first-child):hover .navbarMenus_underline {
     transition: 0.15s ease-in-out;
     opacity: 1;
 }
@@ -81,7 +85,6 @@
     background-color: rgb(25,25,25);
     filter: brightness(130%);
 }
-
 
 
 

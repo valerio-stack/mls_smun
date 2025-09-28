@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useContext } from "react";
-import { assignments_obj as assignments_obj_import } from "../mainPageLeft";
+import { assignments_obj as assignments_obj_import } from "../../mainPage";
 import SpringTransition from "../../../../assets/components/springTransition";
 import { get_assignmentTimeStatus, get_assignmentStatus } from "./functions/assignmentDateFunctions";
 
@@ -40,7 +40,7 @@ export default function Assignment(props) {
                 <div 
                     className="assignment" 
                     style={{
-                        color: (assignmentStatus === 'finished') && 'rgba(255, 255, 255, 0.4',
+                        color: (assignmentStatus === 'finished') && 'rgba(255, 255, 255, 0.4)'
                     }}>
                     <section className="assignment_top" onClick={() => set_expandableStatus((prev) => !prev)}>
                         <div 
@@ -78,9 +78,34 @@ export default function Assignment(props) {
                             <div className="assignment_expandable">
                                 <div className="dividerLine"></div>
 
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda quia impedit minus dolor fugiat omnis quae officia libero suscipit. Repudiandae atque illum aliquid blanditiis est voluptatum deserunt pariatur impedit mollitia.</p>
+                                <p 
+                                    style={{color: (assignmentStatus === 'finished' || assignmentStatus === 'overdue') && 'rgba(255, 255, 255, 0.4)'}}
+                                >
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda quia impedit minus dolor fugiat omnis quae officia libero suscipit. Repudiandae atque illum aliquid blanditiis est voluptatum deserunt pariatur impedit mollitia.
+                                </p>
+                                
 
-                                <button>+ upload</button>
+                                { props.type === 'PHOTO' &&
+                                    <button
+                                        style={{
+                                            backgroundColor: (assignmentStatus === 'finished' || assignmentStatus === 'overdue') && 'gray',
+                                            pointerEvents: (assignmentStatus === 'finished' || assignmentStatus === 'overdue') && 'none'
+                                        }}
+                                    >
+                                        + upload
+                                    </button>
+                                }
+
+                                { props.type !== 'PHOTO' &&
+                                    <button
+                                        style={{
+                                            backgroundColor: (assignmentStatus === 'finished' || assignmentStatus === 'overdue') && 'gray',
+                                            pointerEvents: (assignmentStatus === 'finished' || assignmentStatus === 'overdue') && 'none'
+                                        }}
+                                    >
+                                        Enter
+                                    </button>
+                                }
                             </div>
                         }
                     </section>

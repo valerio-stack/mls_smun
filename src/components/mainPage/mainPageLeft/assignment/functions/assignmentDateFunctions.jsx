@@ -18,9 +18,9 @@ export function get_assignmentTimeStatus(dueDate) {
 }
 
 export function get_assignmentStatus(timeStatus, isDone) {
-    let isOverdue = timeStatus.value < 0
+    let isOverdue = (timeStatus.value !== 'Overdue') ? timeStatus.value <= 0 : true
 
     if (isDone === false && !isOverdue) { return 'ongoing' }
-    else if (isDone === true && !isOverdue) { return 'finished' }
-    else if (isOverdue) { return 'overdue' }
+    else if (isDone === true) { return 'finished' }
+    else if (isDone === false && isOverdue) { return 'overdue' }
 }
