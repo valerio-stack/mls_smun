@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useContext } from "react";
 import { assignments_obj as assignments_obj_import } from "../../mainPage";
 import SpringTransition from "../../../../assets/components/springTransition";
-import { get_assignmentTimeStatus, get_assignmentStatus } from "./functions/assignmentDateFunctions";
+import { get_assignmentTimeStatus, get_assignmentStatus } from "./assignmentDateFunctions";
 
 
 export default function Assignment(props) {

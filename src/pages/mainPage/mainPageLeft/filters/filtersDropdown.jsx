@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef, useContext } from "react";
-import { assignments_obj as assignments_obj_import } from "../../mainPage";
-import { activeFilter_obj as activeFilter_obj_import } from "./filters";
-import { get_assignmentStatus, get_assignmentTimeStatus } from "../assignment/functions/assignmentDateFunctions";
-import { useTransition, animated } from '@react-spring/web'
-import SpringTransition from "../../../../assets/components/springTransition";
-import UpsideDownArrow from "../../../../assets/components/upsideDownArrow";
+import { assignments_obj as assignments_obj_import } from "../../mainPage.jsx";
+import { activeFilter_obj as activeFilter_obj_import } from "./filters.jsx";
+import { get_assignmentStatus, get_assignmentTimeStatus } from "../assignment/assignmentDateFunctions.jsx";
+import { useTransition, animated } from '@react-spring/web';
+import SpringTransition from "../../../../assets/components/springTransition.jsx";
+import UpsideDownArrow from "../../../../assets/components/upsideDownArrow.jsx";
+
 
 
 export default function FiltersDropdown(props) {

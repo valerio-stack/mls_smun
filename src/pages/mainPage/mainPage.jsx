@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect, createContext, useContext } from "react"
-import Navbar from "../navbar/navbar"
+import Navbar from "../../components/navbar"
 import MainPageLeft from "./mainPageLeft/mainPageLeft"
 import MainPageRight from "./mainPageRight/mainPageRight"
-import { get_assignmentTimeStatus, get_assignmentStatus } from "./mainPageLeft/assignment/functions/assignmentDateFunctions"
+import { get_assignmentTimeStatus, get_assignmentStatus } from "./mainPageLeft/assignment/assignmentDateFunctions"
 
 export let isMinimized_obj = createContext()
 export let assignments_obj = createContext()

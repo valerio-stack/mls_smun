@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useContext } from 'react';
 import Chart from 'chart.js/auto';
 import { assignments_obj as assignments_obj_import } from '../mainPage';
-import { get_assignmentTimeStatus, get_assignmentStatus } from '../mainPageLeft/assignment/functions/assignmentDateFunctions';
+import { get_assignmentTimeStatus, get_assignmentStatus } from '../mainPageLeft/assignment/assignmentDateFunctions';
 
 
 export default function MainPageRight_top() {
@@ -16,32 +16,60 @@ export default function MainPageRight_top() {
 
     let finishedPercentage = Math.round( ((assignmentsFinishedCount / assignmentsCount) * 100), 2 )
     let unfinishedPercentage = Math.round( (( (assignmentsCount - assignmentsFinishedCount) / assignmentsCount) * 100), 2 )
-    let data = [finishedPercentage, unfinishedPercentage];
+    let data = [finishedPercentage, unfinishedPercentage]
 
     useEffect(() => {
-        new Chart(
-            chartRef.current,
-            {
-                type: 'doughnut',
-                data: {
-                    datasets: [
-                        {
-                            label: '  Assignment completion (%)',
-                            data: data,
-                        }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    cutout: '50%',
-                    plugins: {
-                        legend: {display: false},
-                        title: {display: false}
+        if (assignments_obj.assignments.value.length >= 1) {
+            new Chart(
+                chartRef.current,
+                {
+                    type: 'doughnut',
+                    data: {
+                        datasets: [
+                            {
+                                label: '  Assignment completion (%)',
+                                data: data,
+                            }
+                        ]
                     },
-                    backgroundColor: ['rgba(0, 183, 255, 1)', 'gray']
+                    options: {
+                        responsive: true,
+                        cutout: '50%',
+                        plugins: {
+                            legend: {display: false},
+                            title: {display: false}
+                        },
+                        backgroundColor: ['rgba(0, 183, 255, 1)', 'gray']
+                    }
                 }
-            }
-        )
+            )
+        }
+
+        else {
+            new Chart(
+                chartRef.current,
+                {
+                    type: 'doughnut',
+                    data: {
+                        datasets: [
+                            {
+                                label: '  Assignment completion (%)',
+                                data: [100],
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        cutout: '50%',
+                        plugins: {
+                            legend: {display: false},
+                            title: {display: false}
+                        },
+                        backgroundColor: ['rgba(0, 183, 255, 1)']
+                    }
+                }
+            )
+        }
     },[])
 
 
@@ -59,7 +87,7 @@ export default function MainPageRight_top() {
                         </section>
 
                         <section className="topStats_bottomContainer">
-                            <h2>{`${finishedPercentage}%`}</h2>
+                            <h2>{`${finishedPercentage ? finishedPercentage : 0}%`}</h2>
                         </section>
                     </div>
                 </section>

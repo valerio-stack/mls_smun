@@ -1,2 +1,0 @@
-a: conditionally render each assignment. If it's filtered out, then don't render it. Make an isFiltered state?
-b: 
